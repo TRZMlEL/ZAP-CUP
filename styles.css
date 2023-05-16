@@ -12,6 +12,7 @@
     --light: #ffffff;
     --lol: #73d3f6;
     --cs: #ff9747;
+    --main: #73d3f6;
 }
 
 header{
@@ -25,7 +26,7 @@ header{
 
 body{
     width: 99.06vw;
-    height: 300vh;
+    height: 100vh;
     margin: 0px;
     background: var(--dark);
     display: flex;
@@ -33,7 +34,21 @@ body{
 }
 
 #container{
-    height: 300vh;
+    height: 100%;
+}
+
+.lol > .content{
+    background: transparent;
+    margin: 10vmin 0vmin 0vmin 10vmin;
+    padding: 0vmin 5vmin 5vmin 5vmin;
+    flex-flow: column;
+}
+
+.cs > .content{
+    background: transparent;
+    margin: 10vmin 10vmin 0vmin 0vmin;
+    padding: 0vmin 5vmin 5vmin 5vmin;
+    flex-flow: column;
 }
 
 h1{
@@ -44,6 +59,15 @@ h2{
     position: absolute;
     font-size: 3.5vmin;
     color: var(--light)
+}
+
+h3{
+    font-size: 3vmin;
+    color: var(--main);
+}
+
+a{
+    color: var(--main)
 }
 
 p{
@@ -63,7 +87,7 @@ p{
 .zakladka{
     position: fixed;
     width: 5vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,46 +174,59 @@ p{
 .line{
     position: absolute;
     width: 1vmin;
-    height: 1000vmin;
+    height: 200%;
     z-index: 4;
 }
 
 .line2{
     position: absolute;
     width: 1vmin;
-    height: 1000vmin;
+    height: 200%;
     z-index: 4;
 }
 
 .lol > .line{
-    background: var(--lol);
+    background: var(--main);
     transform: translateX(94vw);
 }
 
 .cs > .line{
-    background: var(--cs);
+    background: var(--main);
     transform: translateX(-94vw);
 }
 
 .lol > .line2{
-    background: var(--lol);
+    background: var(--main);
     transform: translateX(4.55vw);
 }
 
 .cs > .line2{
-    background: var(--cs);
+    background: var(--main);
     transform: translateX(-4.55vw);
 }
 
-.cs > .regulamin > h3{
-    color: var(--cs);
-}
-
-.lol > .regulamin > h3{
-    color: var(--lol);
-}
-
 ::selection{
-    background-color: var(--light);
+    background-color: var(--main);
     color: var(--dark);
+    font-weight: bold;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 1vmin;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--dark);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--main);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--main);
+  }
